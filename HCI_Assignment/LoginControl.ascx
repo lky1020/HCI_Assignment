@@ -30,7 +30,7 @@
 						<p>Password</p> 
 						<div>
 							<asp:TextBox ID="txtPassword" runat="server" placeholder="Enter Your Password" TextMode="Password" CssClass="inlinePassword"></asp:TextBox>
-							<i class="fas fa-eye inlinePassword" onclick="passwordFunction()"></i>	
+							<i class="fas fa-eye inlinePassword" onclick="passwordFunction()" title="Show Password"></i>	
 						</div>
 							
 						<asp:RequiredFieldValidator ID="rfvPassword" runat="server" 
@@ -51,10 +51,10 @@
 				</div>
 			</ContentTemplate>  
 		</asp:UpdatePanel> 
-					
+<%--					
 		<a href="ForgotPassword.aspx">Forget Password</a>
 		<br/>
-		<a href="Registration.aspx">Create a new Account</a>
+		<a href="Registration.aspx">Create a new Account</a>--%>
 	</div>
 </div>
 

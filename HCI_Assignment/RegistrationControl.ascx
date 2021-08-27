@@ -48,7 +48,7 @@
 				<div>
 					<asp:Label ID="lblPassword" runat="server" CssClass="registerLabel">Password</asp:Label>
 					<asp:TextBox ID="txtPassword" TextMode="Password" runat="server" placeholder="Enter Your Password" CssClass="txtStyle"></asp:TextBox>
-					<i class="fas fa-eye" onclick="passwordFunction()"></i>	
+					<i class="fas fa-eye" onclick="passwordFunction()" title="Show Password"></i>	
 
 					<asp:RequiredFieldValidator ID="rfvPassword" runat="server" 
 						ControlToValidate="txtPassword" ErrorMessage="Please Enter Your Password!" 
@@ -85,10 +85,10 @@
 		</ContentTemplate>  
 	</asp:UpdatePanel> 
 
-	<div style="text-align: center; margin-top: 15px;">
+<%--	<div style="text-align: center; margin-top: 15px;">
 		<a href="Login.aspx">Login</a><br/>
 		<a href="Homepage.aspx">Cancel Register</a>
-	</div>
+	</div>--%>
 </div>
 
 <img src="img/login_register/nightCity_Register.jpg" />

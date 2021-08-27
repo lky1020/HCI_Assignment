@@ -41,10 +41,10 @@
             </div>
             
             <div class="siteMap" id="siteMap">
-                <div class="siteMapPath">
+                <%--<div class="siteMapPath">
                     <asp:SiteMapPath ID="SiteMapPath1" runat="server" RenderCurrentNodeAsLink="false" 
                         CurrentNodeStyle-ForeColor="#ff0157" NodeStyle-Font-Underline="false"></asp:SiteMapPath>
-                </div>
+                </div>--%>
 
                 <div class="siteBtn" id="siteBtn"></div>
             </div>
@@ -54,10 +54,10 @@
 
                 <div class="headerMenu">
                     <ul class='navigation' id="navigation">
-                        <li><a href="#banner"">Home</a></li>
+<%--                        <li><a href="#banner"">Home</a></li>
                         <li><a href="#about"">About</a></li>
                         <li><a href="#artworks"">Artworks</a></li>
-                        <li><a href="#contact"">Contact</a></li>
+                        <li><a href="#contact"">Contact</a></li>--%>
                     </ul>
 
                     <div class="siteMenuBar" id="headerSiteMenuBar">
@@ -68,7 +68,7 @@
                         </div>
                     </div>
 
-                    <div class="toggle" id="toggle"></div>
+                    <div class="toggle" id="toggle" title="Open Navigation Bar"></div>
                 </div>
             </header>
         </div>
@@ -93,6 +93,7 @@
                         </div>
 
                         <a href="Login.aspx" ID="btnLogin" class="profileBtn">Login</a>
+                        <a href="Registration.aspx" ID="btnRegister" class="profileBtn" style="opacity: 0.5;">Register</a>
                         <asp:Button ID="btnLogout" CssClass="profileBtn" runat="server" Text="Logout" OnClick="btnLogout_Click" EnableViewState="False"
                             CausesValidation="False"></asp:Button>
                         <a href="Profile.aspx" ID="btnProfile" class="profileBtn">Manage Profile</a>
@@ -231,6 +232,7 @@
 
             //Undisplay the login btn
             document.getElementById("btnLogin").style.display = "none";
+            document.getElementById("btnRegister").style.display = "none";
 
             //Display the profile box
             document.getElementById("profileBox").style.display = "flex";
@@ -239,12 +241,14 @@
 
             //Undisplay the login btn
             document.getElementById("btnLogin").style.display = "none";
+            document.getElementById("btnRegister").style.display = "none";
         }
 
         //Set up the profile UI for deactive status
         function deactiveProfileUI() {
             //Display the login btn
             document.getElementById("btnLogin").style.display = "block";
+            document.getElementById("btnRegister").style.display = "block";
 
             //Undisplay the profile box
             document.getElementById("profileBox").style.display = "none";
@@ -267,6 +271,12 @@
             sideBar.classList.toggle('active');
             siteMap.classList.toggle('active');
             siteMenu.classList.toggle('active');
+
+            if (menuToggle.classList.contains('active')) {
+                menuToggle.title = "Close Navigation Bar";
+            } else {
+                menuToggle.title = "Open Navigation Bar";
+            }
 
             // Allow to perfrom action in sideBar
             if (sideBar.classList.contains('active')) {

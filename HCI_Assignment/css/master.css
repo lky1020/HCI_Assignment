@@ -35,6 +35,7 @@ p {
 }
 
 .btn:hover {
+    cursor: pointer;
     letter-spacing: 4px;
 }
 
@@ -260,7 +261,7 @@ header.activeSticky .headerMenu .toggle {
     padding: 10px 0px 10px 100px;
 }
 
-.siteMap.active {
+/*.siteMap.active {
     position: fixed;
     top: 85px;
     left: 0;
@@ -275,7 +276,7 @@ header.activeSticky .headerMenu .toggle {
 .siteMap.active .siteMapPath {
     padding: 10px 0px;
     width: calc(100% - 5%);
-}
+}*/
 
 .siteMap.active .siteBtn {
     background-color: aquamarine;

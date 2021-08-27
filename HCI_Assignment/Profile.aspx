@@ -96,7 +96,7 @@
                         <div class="newPassword">
                             <asp:Label ID="lblNewPassword" runat="server" Text="New Password&nbsp;:&nbsp" Width="150px"></asp:Label>
                             <asp:TextBox ID="txtBoxNewPassword" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
-                            <i class="fas fa-eye" onclick="passwordFunction()"></i>	
+                            <i class="fas fa-eye" onclick="passwordFunction()" title="Show Password"></i>	
                         </div>
                         
                         <div class="editUpdateBtnStyle">
