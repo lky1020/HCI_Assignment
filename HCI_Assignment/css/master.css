@@ -32,10 +32,10 @@ p {
     text-decoration: none;
     letter-spacing: 2px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .btn:hover {
-    cursor: pointer;
     letter-spacing: 4px;
 }
 

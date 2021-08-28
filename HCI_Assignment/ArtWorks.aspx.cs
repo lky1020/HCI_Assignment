@@ -401,7 +401,7 @@ namespace HCI_Assignment.ArtWorks
             {
                 if (Session["userId"] == null)
                 {
-                    Response.Write("<script>alert('Please Login first!')</script>");
+                    Response.Write("<script>if(confirm('Please Login First!')){window.location = 'Login.aspx';} else {if(confirm('No Account? Want to register?')){window.location = 'Registration.aspx';}}</script>");
                 }
                 else
                 {
