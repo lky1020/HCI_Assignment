@@ -225,6 +225,16 @@
             } else {
                 deactiveProfileUI();
             }
+
+            const urlParams = new URLSearchParams(location.search);
+            for (const [key, value] of urlParams) {
+                if (key === 'nav') {
+                    if (value === 'yes') {
+                        document.getElementById("toggle").click();
+                        window.history.replaceState({}, document.title, "/" + "Homepage.aspx");
+                    }
+                }
+            }
         });
 
         //Set up the profile UI for active status

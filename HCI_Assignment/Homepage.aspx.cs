@@ -20,23 +20,29 @@ namespace HCI_Assignment
 
         protected void btnViewAll_Click(object sender, EventArgs e)
         {
-            if (Session["userRole"] != null)
+            if(Session["username"] == null)
             {
-                //Direct to gallery
-                if (Session["userRole"].ToString().Equals("Artist"))
+                Response.Write("<script>if(confirm('Hi, would you like to Login first to access our artworks?')){window.location = 'Homepage.aspx?nav=yes';} else {}</script>");
+            }
+            else
+            {
+                if (Session["userRole"] != null)
                 {
-                    Response.Write("<script>window.location = 'ArtistGallery.aspx';</script>");
+                    //Direct to gallery
+                    if (Session["userRole"].ToString().Equals("Artist"))
+                    {
+                        Response.Write("<script>window.location = 'ArtistGallery.aspx';</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>window.location = 'ArtWorks.aspx';</script>");
+                    }
                 }
                 else
                 {
                     Response.Write("<script>window.location = 'ArtWorks.aspx';</script>");
                 }
             }
-            else
-            {
-                Response.Write("<script>window.location = 'ArtWorks.aspx';</script>");
-            }
-
         }
     }
 }
