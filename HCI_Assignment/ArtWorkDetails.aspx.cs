@@ -271,7 +271,7 @@ namespace HCI_Assignment.ArtWorks
 
                                         //search the new cartid
                                         conn.Open();
-                                        string queryFindCartID = "Select CartId FROM [dbo].[Cart] WHERE UserId = '" + Session["username"] + "'AND status = 'cart'";
+                                        string queryFindCartID = "Select CartId FROM [dbo].[Cart] WHERE UserId = '" + Session["userId"] + "'AND status = 'cart'";
 
                                         using (SqlCommand cmdCheckCart = new SqlCommand(queryFindCartID, conn))
                                         {

@@ -421,7 +421,7 @@ namespace HCI_Assignment.ArtWorks
                     {
                         //insert to create a new cart
                         String status = "cart";
-                        string sql = "INSERT into Cart (UserId, status) values('" + Session["username"] + "', '" + status + "')";
+                        string sql = "INSERT into Cart (UserId, status) values('" + Session["userId"] + "', '" + status + "')";
 
                         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ArtWorkDb"].ConnectionString);
                         SqlCommand cmd = new SqlCommand();
@@ -435,7 +435,7 @@ namespace HCI_Assignment.ArtWorks
 
                         //search the new cartid
                         conn.Open();
-                        string queryFindCartID = "Select CartId FROM [dbo].[Cart] WHERE UserId = '" + Session["username"] + "'AND status = 'cart'";
+                        string queryFindCartID = "Select CartId FROM [dbo].[Cart] WHERE UserId = '" + Session["userId"] + "'AND status = 'cart'";
 
                         using (SqlCommand cmdCheckCart = new SqlCommand(queryFindCartID, conn))
                         {
