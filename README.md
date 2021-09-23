@@ -6,4 +6,4 @@
 2. Paste "AttachDbFilename" in Find text field.
 3. Click "Find All"
 4. Click the first item with the name="ArtWorkDb", the system will bring you to Web.config file.
-5. Change "C:\Users\User\Desktop\HCI_Assignment\HCI_Assignment\App_Data\ArtWorkDb.mdf" to your own local path andrun the system.
+5. Change "C:\Users\User\Desktop\HCI_Assignment\HCI_Assignment\App_Data\ArtWorkDb.mdf" to your own local path and run the system.
